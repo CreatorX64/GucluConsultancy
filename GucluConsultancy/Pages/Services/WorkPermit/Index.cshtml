@@ -1,0 +1,74 @@
+﻿@page "/calisma-izni"
+@model GucluConsultancy.Pages.Services.WorkPermit.IndexModel
+
+@{
+	ViewData["Title"] = "Çalışma İzni İşlemleri";
+}
+
+<section class="page-header">
+	<div class="container">
+		<h1>Çalışma İzni İşlemleri</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="container">
+
+		<div class="card-container">
+			<div class="card-image calisma-izni-ikametli"></div>
+			<div class="card-text">
+				<h2>İkamet İzinli Çalışma İzni</h2>
+				<p>En az 6 ay süreli ikamet izni almış olan yabancıları çalıştırmak için çalışma izni almak isteyen işverenler tarafından yetki verilmesi halinde çalışma izni alınması işlemlerinde Kocaeli, İstanbul ve Ankara illeri başta olmak üzere Türkiye genelinde danışmanlık hizmeti vermekteyiz.</p>
+				<p class="card-links">
+					<a asp-page="/Services/WorkPermit/WithResidency" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.ailevecalisma.gov.tr/media/6369/yi.pdf" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card-image gecici-koruma"></div>
+			<div class="card-text">
+				<h2>Geçici Koruma Kapsamında Suriyelilere Çalışma İzni</h2>
+				<p>En az 6 ay süre önce Geçici Koruma Kimlik Belgesi almış olan Suriye uyruklu yabancıları çalıştırmak için çalışma izni almak isteyen işverenler tarafından yetki verilmesi halinde çalışma izni alınması işlemlerinde Kocaeli, İstanbul ve Ankara illeri başta olmak üzere Türkiye genelinde danışmanlık hizmeti vermekteyiz.</p>
+				<p class="card-links">
+					<a asp-page="/Services/WorkPermit/TemporaryProtection" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.ailevecalisma.gov.tr/media/6587/kolay-%C3%A7al%C4%B1%C5%9Fma-izni-ba%C5%9Fvurusu-bilgilendirici-bro%C5%9Fuer.pdf" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card-image hasta-yasli-bakimi"></div>
+			<div class="card-text">
+				<h2>Evlerde Yaşlı, Hasta ve Çocuk Bakıcılığı Çalışma İzni</h2>
+				<p>En az 6 ay süreli ikamet izni almış olan yabancıları çalıştırmak için çalışma izni almak isteyen işverenler tarafından tarafımıza yetki verilmesi halinde çalışma izni alınması işlemlerinde Kocaeli, İstanbul ve Ankara illeri başta olmak üzere Türkiye genelinde danışmanlık hizmeti vermekteyiz.</p>
+				<p class="card-links">
+					<a asp-page="/Services/WorkPermit/ChildElderCare" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.ailevecalisma.gov.tr/media/6369/yi.pdf" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card-image uluslararasi-koruma"></div>
+			<div class="card-text">
+				<h2>Uluslararası Koruma Kapsamındaki Yabancılara Çalışma İzni</h2>
+				<p>En az 6 ay süreli Uluslararası Koruma Kimlik Belgesi almış olan yabancıları çalıştırmak için çalışma izni almak isteyen işverenler tarafından yetki verilmesi halinde çalışma izni alınması işlemlerinde Kocaeli, İstanbul ve Ankara illeri başta olmak üzere Türkiye genelinde danışmanlık hizmeti vermekteyiz.</p>
+				<p class="card-links">
+					<a asp-page="/Services/WorkPermit/InternationalProtection" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.ailevecalisma.gov.tr/media/6369/yi.pdf" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+	</div>
+</section>

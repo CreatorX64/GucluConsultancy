@@ -1,0 +1,74 @@
+﻿@page "/ikamet-izni"
+@model GucluConsultancy.Pages.Services.ResidencyPermit.IndexModel
+
+@{
+	ViewData["Title"] = "İkamet İzni Randevusu";
+}
+
+<section class="page-header">
+	<div class="container">
+		<h1>İkamet İzni Randevusu</h1>
+	</div>
+</section>
+
+<section class="page-content">
+	<div class="container">
+
+		<div class="card-container">
+			<div class="card-image ikamet-kisa-donem"></div>
+			<div class="card-text">
+				<h2>Kısa Dönem İkamet İzni</h2>
+				<p>Türkiye'de taşınmaz malı bulunanlar, ticari bağlantı veya iş kuracaklar, turizm amaçlı kalacaklar, kamu sağlığına tehdit olarak nitelendirilen hastalıklardan birini taşımamak kaydıyla tedavi görecekler, veya Türkçe öğrenme kurslarına katılacakların başvurabileceleri ikamet izin türüdür.</p>
+				<p class="card-links">
+					<a asp-page="/Services/ResidencyPermit/ShortTerm" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.goc.gov.tr/ikamet-izni-cesitleri" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card-image ikamet-aile"></div>
+			<div class="card-text">
+				<h2>Aile İkamet İzni</h2>
+				<p>Türk vatandaşlarının, 5901 sayılı Kanunun 28 inci maddesi kapsamında olanların, veya ikamet izinlerinden birine sahip olan yabancılar ile mültecilerin ve ikincil koruma statüsü sahiplerinin; (a) Yabancı eşine, (b) Kendisinin veya eşinin ergin olmayan yabancı çocuğuna, (c) Kendisinin veya eşinin bağımlı yabancı çocuğuna verilen ikamet izni çeşididir.</p>
+				<p class="card-links">
+					<a asp-page="/Services/ResidencyPermit/Family" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.goc.gov.tr/ikamet-izni-cesitleri" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card-image ikamet-uzun-donem"></div>
+			<div class="card-text">
+				<h2>Uzun Dönem İkamet İzni</h2>
+				<p>Göç Politikaları Kurulunun belirlediği şartlara sahip olunması şartıyla, uzun dönem ikamet izni verilmesi uygun görülen yabancılara verilen ikamet izni çeşididir. Başvurabilmek için kesintisiz en az sekiz yıl ikamet izniyle Türkiye’de kalınmış olunması gerekir.</p>
+				<p class="card-links">
+					<a asp-page="/Services/ResidencyPermit/LongTerm" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.goc.gov.tr/ikamet-izni-cesitleri" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="card-container">
+			<div class="card-image ikamet-ogrenci"></div>
+			<div class="card-text">
+				<h2>Öğrenci İkamet İzni</h2>
+				<p>Türkiye’de bir yükseköğretim kurumunda ön lisans, lisans, yüksek lisans ya da doktora öğrenimi görecek yabancılara öğrenci ikamet izni verilir. Bakımı ve masrafları gerçek veya tüzel kişi tarafından üstlenilen ilk ve orta derecede öğrenim görecek yabancılara, velilerinin veya yasal temsilcilerinin muvafakatiyle öğrenimleri süresince birer yıllık sürelerle öğrenci ikamet izni verilebilir ve uzatılabilir.</p>
+				<p class="card-links">
+					<a asp-page="/Services/ResidencyPermit/Student" class="button button-service">Hemen Başvurun</a>
+					<a href="https://www.goc.gov.tr/ikamet-izni-cesitleri" class="button button-action" target="_blank">
+						Daha Fazla Bilgi Alın
+					</a>
+				</p>
+			</div>
+		</div>
+
+	</div>
+</section>

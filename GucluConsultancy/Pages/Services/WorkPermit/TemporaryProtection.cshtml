@@ -1,0 +1,248 @@
+﻿@page "/calisma-izni/gecici-koruma"
+@model GucluConsultancy.Pages.Services.WorkPermit.TemporaryProtectionModel
+
+@{
+	ViewData["Title"] = "Geçici Koruma Kapsamında Suriyelilere Çalışma İzni";
+}
+
+<section class="page-header">
+	<div class="container">
+		<h1>Geçici Koruma Kapsamında Suriyelilere Çalışma İzni</h1>
+	</div>
+</section>
+
+<section class="page-content form-page">
+	<div class="container">
+
+		<p class="mandotary-field-warning">Zorunlu alanlar <span class="text-danger">*</span> karakteri ile işaretlenmiştir.</p>
+
+		<form class="information-form" method="post" enctype="multipart/form-data">
+			<div asp-validation-summary="ModelOnly"></div>
+
+			<section class="form-group">
+				<h2>Şirket Bilgileri</h2>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Şirket bilgilerini <strong>yalnızca ilk başvuruda</strong> doldurmanız gerekir, diğer başvurularda zorunlu değildir.
+				</p>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Şirketin SGK e-bildirge sorumlusunun elektronik imzası yok ise <strong>E-Tuğra marka elektronik imza tarafımızdan satılmaktadır.</strong>
+				</p>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Sözleşme tarafımızdan hazırlanır (imzalı ve kaşeli)
+				</p>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.SgkNumber"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.SgkNumber" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.RegisteredCapital"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.RegisteredCapital" value="" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.PaidInCapital"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.PaidInCapital" value="" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.CompanyPhoneNumber"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.CompanyPhoneNumber" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.CompanyEmailAddress"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.CompanyEmailAddress" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerJobDetails"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerJobDetails" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ReasonToHireForeigner"></label>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ReasonToHireForeigner" />
+					</div>
+				</div>
+			</section>
+
+			<section class="form-group">
+				<h2>Yabancı Bilgileri</h2>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Yabancı henüz kayıt olmadıysa İlçe Nüfus Müdürlüğüne adres kaydı yaptırması gerekiyor.
+				</p>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerSpouseFullName"></label>
+							<br />
+							<span class="label-detail">evli ise</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerSpouseFullName" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerSpouseNationality"></label>
+							<br />
+							<span class="label-detail">evli ise</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerSpouseNationality" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerPhoneNumber"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerPhoneNumber" />
+					</div>
+					<span asp-validation-for="TemporaryProtectionVM.ForeignerPhoneNumber" class="text-danger"></span>
+				</div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="TemporaryProtectionVM.ForeignerEmailAddress"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="TemporaryProtectionVM.ForeignerEmailAddress" />
+          </div>
+          <span asp-validation-for="TemporaryProtectionVM.ForeignerEmailAddress" class="text-danger"></span>
+        </div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerTurkeyAddress"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerTurkeyAddress" />
+					</div>
+					<span asp-validation-for="TemporaryProtectionVM.ForeignerTurkeyAddress" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerSyriaAddress"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerSyriaAddress" />
+					</div>
+					<span asp-validation-for="TemporaryProtectionVM.ForeignerSyriaAddress" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerEducationStatus"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerEducationStatus" />
+					</div>
+					<span asp-validation-for="TemporaryProtectionVM.ForeignerEducationStatus" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="TemporaryProtectionVM.ForeignerDurationInTurkey"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="TemporaryProtectionVM.ForeignerDurationInTurkey" />
+					</div>
+					<span asp-validation-for="TemporaryProtectionVM.ForeignerDurationInTurkey" class="text-danger"></span>
+				</div>
+			</section>
+
+			<section class="form-group">
+				<h2>Dosyalar</h2>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="CompanyTaxCertificate">Şirket vergi levhası</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="CompanyTaxCertificate" id="CompanyTaxCertificate" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="ForeignerTemporaryIdCard">Yabancının geçici kimlik belgesi</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="ForeignerTemporaryIdCard" id="ForeignerTemporaryIdCard" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="ForeignerBiometricPhoto">Yabancı biyometrik fotoğrafı</label> <span class="text-danger">*</span>
+							<br />
+							<span class="label-detail">son 6 ay içinde çekilmiş</span>
+						</div>
+						<input type="file" name="ForeignerBiometricPhoto" id="ForeignerBiometricPhoto" />
+					</div>
+				</div>
+			</section>
+
+			<div class="form-line">
+				<div class="user-agreement-input">
+					<input type="checkbox" id="user-agreement-check" name="user-agreement-check" required />
+					<label for="user-agreement-check">
+						<a asp-page="/UserAgreement" target="_blank">Kullanıcı sözleşmesini</a> okuduğumu ve kabul ettiğimi onaylıyorum.
+					</label>
+				</div>
+				<button type="submit" class="button button-action" onclick="return validateInput()">Gönder</button>
+			</div>
+		</form>
+
+	</div>
+</section>
+
+@section Scripts {
+
+	<partial name="_ValidationScriptsPartial" />
+
+	<script>
+		function validateInput()
+		{
+			if (document.getElementById("CompanyTaxCertificate").value === "")
+			{
+				swal("Lütfen şirket vergi levhası yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("ForeignerTemporaryIdCard").value === "")
+			{
+				swal("Lütfen yabancının geçici kimlik belgesini yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("ForeignerBiometricPhoto").value === "")
+			{
+				swal("Lütfen yabancının biyometrik fotoğrafını yükleyiniz.", "error");
+				return false;
+			}
+			else if (!document.querySelector("#user-agreement-check").checked)
+			{
+				swal("Lütfen kullanıcı sözleşmesini onaylayınız.", "error");
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+
+}

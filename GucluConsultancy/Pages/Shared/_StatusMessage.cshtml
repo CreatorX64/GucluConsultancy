@@ -1,0 +1,11 @@
+﻿@model string
+
+@if (!string.IsNullOrWhiteSpace(Model))
+{
+	<script>
+		window.addEventListener("DOMContentLoaded", () =>
+		{
+			swal("@Model", "success");
+		});
+	</script>
+}

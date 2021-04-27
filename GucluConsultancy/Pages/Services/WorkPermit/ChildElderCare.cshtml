@@ -1,0 +1,341 @@
+﻿@page "/calisma-izni/yasli-hasta-cocuk-bakimi"
+@model GucluConsultancy.Pages.Services.WorkPermit.ChildElderCareModel
+
+@{
+	ViewData["Title"] = "Evlerde Yaşlı, Hasta ve Çocuk Bakıcılığı Çalışma İzni";
+}
+
+<section class="page-header">
+	<div class="container">
+		<h1>Evlerde Yaşlı, Hasta ve Çocuk Bakıcılığı Çalışma İzni</h1>
+	</div>
+</section>
+
+<section class="page-content form-page">
+	<div class="container">
+
+		<p class="mandotary-field-warning">Zorunlu alanlar <span class="text-danger">*</span> karakteri ile işaretlenmiştir.</p>
+
+		<form class="information-form" method="post" enctype="multipart/form-data">
+			<div asp-validation-summary="ModelOnly"></div>
+
+			<section class="form-group">
+				<h2>İşveren Bilgileri</h2>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;İşverenin (bakılacak kişi çocuk ise annesi veya babası, yaşlı ise oğlu veya kızı olabilir) elektronik imzası yoksa <strong>E-Tuğra marka elektronik imza tarafımızdan satılmaktadır.</strong>
+				</p>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Sözleşme ve E-Bildirge formu tarafımızdan hazırlanır.
+				</p>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.EmployerPhoneNumber"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.EmployerPhoneNumber" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.EmployerPhoneNumber" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.EmployerEmailAddress"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.EmployerEmailAddress" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.EmployerEmailAddress" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.EmployerHomeAddress"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.EmployerHomeAddress" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.EmployerHomeAddress" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerJobDetails"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerJobDetails" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerJobDetails" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ReasonToHireForeigner"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ReasonToHireForeigner" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ReasonToHireForeigner" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerWorkAddress"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerWorkAddress" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerWorkAddress" class="text-danger"></span>
+				</div>
+			</section>
+
+			<section class="form-group">
+				<h2>Yabancı Bilgileri</h2>
+				<p class="form-group-info">
+					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Yabancı henüz kayıt olmadıysa İlçe Nüfus Müdürlüğüne adres kaydı yaptırması gerekiyor.
+				</p>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerFatherName"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerFatherName" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerFatherName" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerPhoneNumber"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerPhoneNumber" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerPhoneNumber" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerEmailAddress"></label>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerEmailAddress" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerAbroadAddress"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerAbroadAddress" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerAbroadAddress" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerMotherLanguage"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerMotherLanguage" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerMotherLanguage" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerTurkishLevel"></label> <span class="text-danger">*</span>
+						</div>
+						<select asp-for="ChildElderCareVM.ForeignerTurkishLevel">
+							<option value="Az">Az</option>
+							<option value="Normal">Normal</option>
+							<option value="İyi">İyi</option>
+						</select>
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerTurkishLevel" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerOtherLanguages"></label>
+							<br />
+							<span class="label-detail">Virgül ile ayırarak yazınız</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerOtherLanguages" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerEducationStatus"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerEducationStatus" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerEducationStatus" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerLastGraduatedSchoolAndPlace"></label> <span class="text-danger">*</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerLastGraduatedSchoolAndPlace" />
+					</div>
+					<span asp-validation-for="ChildElderCareVM.ForeignerLastGraduatedSchoolAndPlace" class="text-danger"></span>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerSpouseFullName"></label>
+							<br />
+							<span class="label-detail">evli ise</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerSpouseFullName" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label asp-for="ChildElderCareVM.ForeignerSpouseNationality"></label>
+							<br />
+							<span class="label-detail">evli ise</span>
+						</div>
+						<input asp-for="ChildElderCareVM.ForeignerSpouseNationality" />
+					</div>
+				</div>
+			</section>
+
+			<section class="form-group">
+				<h2>Dosyalar</h2>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="EmployerIdCard">İşverenin nüfus cüzdanı fotokopisi</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="EmployerIdCard" id="EmployerIdCard" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="EmployerIncomeDocument">İşverenin gelir belgesi</label> <span class="text-danger">*</span>
+							<br />
+							<span class="label-detail">(Maaş bordrosu, kira geliri beyannamesi, Gelir veya Kurumlar Vergisi beyannamesi, vergi levhası vb.)</span>
+						</div>
+						<input type="file" name="EmployerIncomeDocument" id="EmployerIncomeDocument" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="CareTakerIdCard">Bakılacak kişinin nüfus cüzdanı fotokopisi</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="CareTakerIdCard" id="CareTakerIdCard" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="CareTakerSettlementDocument">Bakılacak kişinin yerleşim yeri belgesi</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="CareTakerSettlementDocument" id="CareTakerSettlementDocument" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="ForeignerPassport">Yabancının pasaport fotoğraflı sayfası</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="ForeignerPassport" id="ForeignerPassport" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="ForeignerPassportLastTurkeyEntryPage">Yabancının pasaport Türkiye'ye son giriş tarihli sayfası</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="ForeignerPassportLastTurkeyEntryPage" id="ForeignerPassportLastTurkeyEntryPage" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="ForeignerResidencyOrWorkPermit">Yabancının ikamet izni / çalışma izni belge fotokopisi</label> <span class="text-danger">*</span>
+						</div>
+						<input type="file" name="ForeignerResidencyOrWorkPermit" id="ForeignerResidencyOrWorkPermit" />
+					</div>
+				</div>
+				<div class="form-line">
+					<div class="label-input">
+						<div class="label">
+							<label for="ForeignerBiometricPhoto">Yabancının biyometrik fotoğrafı</label> <span class="text-danger">*</span>
+							<br />
+							<span class="label-detail">son 6 ay içinde çekilmiş</span>
+						</div>
+						<input type="file" name="ForeignerBiometricPhoto" id="ForeignerBiometricPhoto" />
+					</div>
+				</div>
+			</section>
+
+			<div class="form-line">
+				<div class="user-agreement-input">
+					<input type="checkbox" id="user-agreement-check" name="user-agreement-check" required />
+					<label for="user-agreement-check">
+						<a asp-page="/UserAgreement" target="_blank">Kullanıcı sözleşmesini</a> okuduğumu ve kabul ettiğimi onaylıyorum.
+					</label>
+				</div>
+				<button type="submit" class="button button-action" onclick="return validateInput()">Gönder</button>
+			</div>
+		</form>
+
+	</div>
+</section>
+
+@section Scripts {
+
+	<partial name="_ValidationScriptsPartial" />
+
+	<script>
+		function validateInput()
+		{
+			if (document.getElementById("EmployerIdCard").value === "")
+			{
+				swal("Lütfen işveren nüfus cüzdanı fotokopisi yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("EmployerIncomeDocument").value === "")
+			{
+				swal("Lütfen işveren gelir belgesi yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("CareTakerIdCard").value === "")
+			{
+				swal("Lütfen bakılacak kişinin nüfus cüzdanı fotokopisini yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("CareTakerSettlementDocument").value === "")
+			{
+				swal("Lütfen bakılacak kişinin yerleşim yeri belgesini yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("ForeignerPassport").value === "")
+			{
+				swal("Lütfen yabancının pasaport fotoğraflı sayfasını yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("ForeignerPassportLastTurkeyEntryPage").value === "")
+			{
+				swal("Lütfen yabancının pasaport Türkiye'ye son giriş tarihli sayfasını yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("ForeignerResidencyOrWorkPermit").value === "")
+			{
+				swal("Lütfen yabancının ikamet izni / çalışma izni belge fotokopisini yükleyiniz.", "error");
+				return false;
+			}
+			else if (document.getElementById("ForeignerBiometricPhoto").value === "")
+			{
+				swal("Lütfen yabancının biyometrik fotoğrafını yükleyiniz.", "error");
+				return false;
+			}
+			else if (!document.querySelector("#user-agreement-check").checked)
+			{
+				swal("Lütfen kullanıcı sözleşmesini onaylayınız.", "error");
+				return false;
+			}
+
+			return true;
+		}
+	</script>
+
+}

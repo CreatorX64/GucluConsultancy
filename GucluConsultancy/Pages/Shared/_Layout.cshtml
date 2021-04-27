@@ -1,0 +1,116 @@
+﻿@{
+	string templateTitle = "Güçlü Yabancılar Danışmanlık | Çalışma İzni, İkamet İzni, E-İmza Satışı, Vize İşlemleri";
+
+	if (!string.IsNullOrWhiteSpace(ViewData["Title"] as string))
+	{
+		templateTitle = $"{ViewData["Title"]} - {templateTitle}";
+	}
+}
+
+<!DOCTYPE html>
+
+<html lang="tr">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="author" content="Hakan Güçlü <creatorX64@outlook.com>" />
+	<meta name="description" content="Yabancıların Türkiye’de ikamet izinleri, çalışma izinleri, e-imza satışı ve vize işlemleri konularında Kocaeli, İstanbul, Ankara başta olmak üzere Türkiye genelinde yabancılara ve işverenlere danışmanlık hizmeti vermekteyiz. Yasalara uygun, hızlı, güvenli ve memnuniyetiniz ön plana alınarak hesaplı ve makul fiyatlarda hizmet vermekteyiz. Talep etmeniz halinde danışmanlık faaliyetlerimizi ayağınıza getiriyoruz." />
+	<title>@templateTitle</title>
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<meta property="og:url" content="https://www.gucludanismanlik.net" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Güçlü Yabancılar Danışmanlık" />
+	<meta property="og:description" content="Yabancıların Türkiye’de ikamet izinleri, çalışma izinleri, e-imza satışı ve vize işlemleri konularında Kocaeli, İstanbul, Ankara başta olmak üzere Türkiye genelinde yabancılara ve işverenlere danışmanlık hizmeti vermekteyiz." />
+	<meta property="og:image" content="/img/meta-facebook-post.jpg" />
+
+	<meta name="twitter:title" content="Güçlü Yabancılar Danışmanlık" />
+	<meta name="twitter:description" content="Yabancıların Türkiye’de ikamet izinleri, çalışma izinleri, e-imza satışı ve vize işlemleri konularında Kocaeli, İstanbul, Ankara başta olmak üzere Türkiye genelinde yabancılara ve işverenlere danışmanlık hizmeti vermekteyiz." />
+	<meta name="twitter:image" content="/img/meta-twitter-post.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css" />
+
+	<environment include="Development">
+		<link rel="stylesheet" href="~/css/main.css" />
+	</environment>
+	<environment exclude="Development">
+		<link rel="stylesheet" href="~/css/main.min.css" />
+	</environment>
+</head>
+<body class="body-home">
+
+	<nav>
+		<div class="container">
+			<div class="brand">
+				<div class="brand-logo"></div>
+				<a asp-page="/Index" class="brand-text">Güçlü Yabancılar Danışmanlık</a>
+			</div>
+			<ul class="nav-menu">
+				<li><a asp-page="/Index">Anasayfa</a></li>
+				<li>
+					<a class="nav-dropdown-activator" href="#!">Hizmetler<span class="no-mobile">imiz</span> <i class="fas fa-caret-down"></i></a>
+					<ul class="nav-dropdown-menu">
+						<li><a asp-page="/Services/ResidencyPermit/Index">İkamet İzni Randevusu</a></li>
+						<li><a asp-page="/Services/WorkPermit/Index">Çalışma İzni İşlemleri</a></li>
+						<li><a asp-page="/Services/Visa">Vize İşlemleri</a></li>
+						<li><a asp-page="/Services/Citizenship">Vatandaşlık İşlemleri</a></li>
+						@*<li><a asp-page="/Services/Translation">Tercümanlık Hizmeltleri</a></li>*@
+						<li><a asp-page="/Services/ESign">Elektronik İmza Satışı</a></li>
+					</ul>
+				</li>
+				<li><a asp-page="/About">Hakkımızda</a></li>
+				<li><a asp-page="/Contact">İletişim</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<main>
+
+		<div class="loader"></div>
+
+		@RenderBody()
+
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>Copyright 2016-@DateTime.Now.Year &copy; <b>Güçlü Yabancılar Danışmanlık</b></p>
+			<ul class="footer-links">
+				<li><a asp-page="/Index">Anasayfa</a></li>
+				<li><a asp-page="/About">Hakkımızda</a></li>
+				<li><a asp-page="/Contact">İletişim</a></li>
+				<li><a asp-page="/Privacy">Gizlilik</a></li>
+			</ul>
+		</div>
+	</footer>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<environment include="Development">
+		<script src="~/js/main.js"></script>
+	</environment>
+	<environment exclude="Development">
+		<script src="~/js/main.min.js"></script>
+	</environment>
+	@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
