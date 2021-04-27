@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GucluConsultancy.Pages.Services
 {
-	public class VisaModel : PageModel
-	{
-		public void OnGet()
-		{
-		}
-	}
+  public class VisaModel : PageModel
+  {
+    public void OnGet()
+    {
+    }
+  }
 }

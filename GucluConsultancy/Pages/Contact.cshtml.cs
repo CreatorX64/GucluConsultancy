@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GucluConsultancy.Pages
 {
-	public class ContactModel : PageModel
-	{
-		public void OnGet()
-		{
-		}
-	}
+  public class ContactModel : PageModel
+  {
+    public void OnGet()
+    {
+    }
+  }
 }

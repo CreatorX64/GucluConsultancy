@@ -2,247 +2,247 @@
 @model GucluConsultancy.Pages.Services.ResidencyPermit.LongTermModel
 
 @{
-	ViewData["Title"] = "Uzun Dönem İkamet İzni";
+  ViewData["Title"] = "Uzun Dönem İkamet İzni";
 }
 
 <section class="page-header">
-	<div class="container">
-		<h1>Uzun Dönem İkamet İzni</h1>
-	</div>
+  <div class="container">
+    <h1>Uzun Dönem İkamet İzni</h1>
+  </div>
 </section>
 
 <section class="page-content form-page">
-	<div class="container">
+  <div class="container">
 
-		<p class="mandotary-field-warning">Zorunlu alanlar <span class="text-danger">*</span> karakteri ile işaretlenmiştir.</p>
+    <p class="mandotary-field-warning">Zorunlu alanlar <span class="text-danger">*</span> karakteri ile işaretlenmiştir.</p>
 
-		<form class="information-form" method="post" enctype="multipart/form-data">
-			<div asp-validation-summary="ModelOnly"></div>
+    <form class="information-form" method="post" enctype="multipart/form-data">
+      <div asp-validation-summary="ModelOnly"></div>
 
-			<section class="form-group">
-				<h2>Kişisel Bilgiler</h2>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.ForeignersId"></label>
-							<br />
-							<span class="label-detail">daha önce ikamet izni varsa</span>
-						</div>
-						<input asp-for="LongTermVM.ForeignersId" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.FatherName"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.FatherName" />
-					</div>
-					<span asp-validation-for="LongTermVM.FatherName" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.MotherName"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.MotherName" />
-					</div>
-					<span asp-validation-for="LongTermVM.MotherName" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.MaritalStatus"></label> <span class="text-danger">*</span>
-						</div>
-						<select asp-for="LongTermVM.MaritalStatus">
-							<option value="" selected disabled>-- Seçiniz --</option>
-							<option value="Evli">Evli</option>
-							<option value="Bekar">Bekar</option>
-							<option value="Boşanmış">Boşanmış</option>
-							<option value="Dul">Dul</option>
-						</select>
-					</div>
-					<span asp-validation-for="LongTermVM.MaritalStatus" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.BirthCountry"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.BirthCountry" />
-					</div>
-					<span asp-validation-for="LongTermVM.BirthCountry" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.BirthNationality"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.BirthNationality" />
-					</div>
-					<span asp-validation-for="LongTermVM.BirthNationality" class="text-danger"></span>
-				</div>
-			</section>
+      <section class="form-group">
+        <h2>Kişisel Bilgiler</h2>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.ForeignersId"></label>
+              <br />
+              <span class="label-detail">daha önce ikamet izni varsa</span>
+            </div>
+            <input asp-for="LongTermVM.ForeignersId" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.FatherName"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.FatherName" />
+          </div>
+          <span asp-validation-for="LongTermVM.FatherName" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.MotherName"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.MotherName" />
+          </div>
+          <span asp-validation-for="LongTermVM.MotherName" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.MaritalStatus"></label> <span class="text-danger">*</span>
+            </div>
+            <select asp-for="LongTermVM.MaritalStatus">
+              <option value="" selected disabled>-- Seçiniz --</option>
+              <option value="Evli">Evli</option>
+              <option value="Bekar">Bekar</option>
+              <option value="Boşanmış">Boşanmış</option>
+              <option value="Dul">Dul</option>
+            </select>
+          </div>
+          <span asp-validation-for="LongTermVM.MaritalStatus" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.BirthCountry"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.BirthCountry" />
+          </div>
+          <span asp-validation-for="LongTermVM.BirthCountry" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.BirthNationality"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.BirthNationality" />
+          </div>
+          <span asp-validation-for="LongTermVM.BirthNationality" class="text-danger"></span>
+        </div>
+      </section>
 
-			<section class="form-group">
-				<h2>İletişim Bilgileri</h2>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.PhoneNumber"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.PhoneNumber" />
-					</div>
-					<span asp-validation-for="LongTermVM.PhoneNumber" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.EmailAddress"></label>
-						</div>
-						<input asp-for="LongTermVM.EmailAddress" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.AddressAbroad"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.AddressAbroad" />
-					</div>
-					<span asp-validation-for="LongTermVM.AddressAbroad" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.AddressTurkey"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.AddressTurkey" />
-					</div>
-					<span asp-validation-for="LongTermVM.AddressTurkey" class="text-danger"></span>
-				</div>
-			</section>
+      <section class="form-group">
+        <h2>İletişim Bilgileri</h2>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.PhoneNumber"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.PhoneNumber" />
+          </div>
+          <span asp-validation-for="LongTermVM.PhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.EmailAddress"></label>
+            </div>
+            <input asp-for="LongTermVM.EmailAddress" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.AddressAbroad"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.AddressAbroad" />
+          </div>
+          <span asp-validation-for="LongTermVM.AddressAbroad" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.AddressTurkey"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.AddressTurkey" />
+          </div>
+          <span asp-validation-for="LongTermVM.AddressTurkey" class="text-danger"></span>
+        </div>
+      </section>
 
-			<section class="form-group">
-				<h2>Diğer Bilgiler</h2>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="LongTermVM.MonthlyIncome"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="LongTermVM.MonthlyIncome" value="" />
-					</div>
-					<span asp-validation-for="LongTermVM.MonthlyIncome" class="text-danger"></span>
-				</div>
-			</section>
+      <section class="form-group">
+        <h2>Diğer Bilgiler</h2>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="LongTermVM.MonthlyIncome"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="LongTermVM.MonthlyIncome" value="" />
+          </div>
+          <span asp-validation-for="LongTermVM.MonthlyIncome" class="text-danger"></span>
+        </div>
+      </section>
 
-			<section class="form-group">
-				<h2>Dosyalar</h2>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="BiometricPhoto">Biyometrik fotoğraf</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="BiometricPhoto" id="BiometricPhoto" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="PassportImage">Pasaport önyüz</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="PassportImage" id="PassportImage" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="PreviousResidencyCard">İkamet izin belgesi</label>
-							<br />
-							<span class="label-detail">daha önce ikamet izni varsa</span>
-						</div>
-						<input type="file" name="PreviousResidencyCard" id="PreviousResidencyCard" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label>Sağlık sigortanız var mı?</label>
-						</div>
-						<div class="insurance-options">
-							<div>
-								<label for="yes-insurance">Evet</label>
-								<input type="radio" name="have-insurance" id="yes-insurance" value="yes" />
-							</div>
-							<div>
-								<label for="no-insurance">Hayır</label>
-								<input type="radio" name="have-insurance" id="no-insurance" value="no" checked />
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="form-line insurance-input">
-					<div class="label-input">
-						<div class="label">
-							<label for="InsuranceImagePath">Sağlık sigortası</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="Insurance" id="Insurance" />
-					</div>
-				</div>
+      <section class="form-group">
+        <h2>Dosyalar</h2>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="BiometricPhoto">Biyometrik fotoğraf</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="BiometricPhoto" id="BiometricPhoto" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="PassportImage">Pasaport önyüz</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="PassportImage" id="PassportImage" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="PreviousResidencyCard">İkamet izin belgesi</label>
+              <br />
+              <span class="label-detail">daha önce ikamet izni varsa</span>
+            </div>
+            <input type="file" name="PreviousResidencyCard" id="PreviousResidencyCard" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label>Sağlık sigortanız var mı?</label>
+            </div>
+            <div class="insurance-options">
+              <div>
+                <label for="yes-insurance">Evet</label>
+                <input type="radio" name="have-insurance" id="yes-insurance" value="yes" />
+              </div>
+              <div>
+                <label for="no-insurance">Hayır</label>
+                <input type="radio" name="have-insurance" id="no-insurance" value="no" checked />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-line insurance-input">
+          <div class="label-input">
+            <div class="label">
+              <label for="InsuranceImagePath">Sağlık sigortası</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="Insurance" id="Insurance" />
+          </div>
+        </div>
 
-			</section>
+      </section>
 
-			<div class="form-line">
-				<div class="user-agreement-input">
-					<input type="checkbox" id="user-agreement-check" name="user-agreement-check" required />
-					<label for="user-agreement-check">
-						<a asp-page="/UserAgreement" target="_blank">Kullanıcı sözleşmesini</a> okuduğumu ve kabul ettiğimi onaylıyorum.
-					</label>
-				</div>
-				<button type="submit" class="button button-action" onclick="return validateInput()">Gönder</button>
-			</div>
-		</form>
+      <div class="form-line">
+        <div class="user-agreement-input">
+          <input type="checkbox" id="user-agreement-check" name="user-agreement-check" required />
+          <label for="user-agreement-check">
+            <a asp-page="/UserAgreement" target="_blank">Kullanıcı sözleşmesini</a> okuduğumu ve kabul ettiğimi onaylıyorum.
+          </label>
+        </div>
+        <button type="submit" class="button button-action" onclick="return validateInput()">Gönder</button>
+      </div>
+    </form>
 
-	</div>
+  </div>
 </section>
 
 @section Scripts {
 
-	<partial name="_ValidationScriptsPartial" />
+  <partial name="_ValidationScriptsPartial" />
 
-	<environment include="Development">
-		<script src="~/js/insurance-checker.js"></script>
-	</environment>
-	<environment exclude="Development">
-		<script src="~/js/insurance-checker.min.js"></script>
-	</environment>
+  <environment include="Development">
+    <script src="~/js/insurance-checker.js"></script>
+  </environment>
+  <environment exclude="Development">
+    <script src="~/js/insurance-checker.min.js"></script>
+  </environment>
 
-	<script>
-		function validateInput()
-		{
-			if (document.getElementById("BiometricPhoto").value === "")
-			{
-				swal("Lütfen biyometrik fotoğraf yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.getElementById("PassportImage").value === "")
-			{
-				swal("Lütfen pasaport önyüz yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#yes-insurance").checked && document.querySelector("#Insurance").value === "")
-			{
-				swal("Lütfen sağlık sigortası yükleyiniz.", "error");
-				return false;
-			}
-			else if (!document.querySelector("#user-agreement-check").checked)
-			{
-				swal("Lütfen kullanıcı sözleşmesini onaylayınız.", "error");
-				return false;
-			}
+  <script>
+    function validateInput()
+    {
+      if (document.getElementById("BiometricPhoto").value === "")
+      {
+        swal("Lütfen biyometrik fotoğraf yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.getElementById("PassportImage").value === "")
+      {
+        swal("Lütfen pasaport önyüz yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#yes-insurance").checked && document.querySelector("#Insurance").value === "")
+      {
+        swal("Lütfen sağlık sigortası yükleyiniz.", "error");
+        return false;
+      }
+      else if (!document.querySelector("#user-agreement-check").checked)
+      {
+        swal("Lütfen kullanıcı sözleşmesini onaylayınız.", "error");
+        return false;
+      }
 
-			return true;
-		}
-	</script>
+      return true;
+    }
+  </script>
 
 }

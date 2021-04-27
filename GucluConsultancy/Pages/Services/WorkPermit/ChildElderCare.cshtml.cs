@@ -8,43 +8,43 @@ using System.Threading.Tasks;
 
 namespace GucluConsultancy.Pages.Services.WorkPermit
 {
-	public class ChildElderCareModel : PageModel
-	{
-		private readonly IEmailSender _emailSender;
-		private readonly IEmailBuilder _emailBuilder;
+  public class ChildElderCareModel : PageModel
+  {
+    private readonly IEmailSender _emailSender;
+    private readonly IEmailBuilder _emailBuilder;
 
-		public ChildElderCareModel(IEmailSender emailSender, IEmailBuilder emailBuilder)
-		{
-			_emailSender = emailSender;
-			_emailBuilder = emailBuilder;
-		}
+    public ChildElderCareModel(IEmailSender emailSender, IEmailBuilder emailBuilder)
+    {
+      _emailSender = emailSender;
+      _emailBuilder = emailBuilder;
+    }
 
-		[BindProperty]
-		public ChildElderCareViewModel ChildElderCareVM { get; set; }
+    [BindProperty]
+    public ChildElderCareViewModel ChildElderCareVM { get; set; }
 
-		[TempData]
-		public string StatusMessage { get; set; }
+    [TempData]
+    public string StatusMessage { get; set; }
 
-		public void OnGet()
-		{
-			ChildElderCareVM = new ChildElderCareViewModel();
-		}
+    public void OnGet()
+    {
+      ChildElderCareVM = new ChildElderCareViewModel();
+    }
 
-		public async Task<IActionResult> OnPostAsync()
-		{
-			if (!ModelState.IsValid)
-			{
-				return Page();
-			}
+    public async Task<IActionResult> OnPostAsync()
+    {
+      if (!ModelState.IsValid)
+      {
+        return Page();
+      }
 
-			IFormFileCollection formFileCollection = HttpContext.Request.Form.Files;
-			string htmlMessage = _emailBuilder.GetHtmlString(EmailConstants.SubjectWorkChildElderCare, ChildElderCareVM);
+      IFormFileCollection formFileCollection = HttpContext.Request.Form.Files;
+      string htmlMessage = _emailBuilder.GetHtmlString(EmailConstants.SubjectWorkChildElderCare, ChildElderCareVM);
 
-			await _emailSender.SendEmailAsync(EmailConstants.SubjectWorkChildElderCare, htmlMessage, formFileCollection);
+      await _emailSender.SendEmailAsync(EmailConstants.SubjectWorkChildElderCare, htmlMessage, formFileCollection);
 
-			StatusMessage = "Form başarıyla gönderildi!";
+      StatusMessage = "Form başarıyla gönderildi!";
 
-			return RedirectToPage("/Index");
-		}
-	}
+      return RedirectToPage("/Index");
+    }
+  }
 }

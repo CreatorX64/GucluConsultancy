@@ -8,47 +8,47 @@ using Microsoft.Extensions.Hosting;
 
 namespace GucluConsultancy
 {
-	public class Startup
-	{
+  public class Startup
+  {
 
-		public Startup(IConfiguration configuration)
-		{
-			Configuration = configuration;
-		}
+    public Startup(IConfiguration configuration)
+    {
+      Configuration = configuration;
+    }
 
-		public IConfiguration Configuration { get; }
+    public IConfiguration Configuration { get; }
 
-		public void ConfigureServices(IServiceCollection services)
-		{
-			services.AddSingleton<IEmailSender, EmailSender>();
-			services.AddScoped<IEmailBuilder, EmailBuilder>();
+    public void ConfigureServices(IServiceCollection services)
+    {
+      services.AddSingleton<IEmailSender, EmailSender>();
+      services.AddScoped<IEmailBuilder, EmailBuilder>();
 
-			services.AddRazorPages();
-		}
+      services.AddRazorPages();
+    }
 
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-		{
-			if (env.IsDevelopment())
-			{
-				app.UseDeveloperExceptionPage();
-			}
-			else
-			{
-				app.UseExceptionHandler("/Error");
-				app.UseHsts();
-			}
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+      if (env.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+      }
+      else
+      {
+        app.UseExceptionHandler("/Error");
+        app.UseHsts();
+      }
 
-			app.UseHttpsRedirection();
-			app.UseStaticFiles();
+      app.UseHttpsRedirection();
+      app.UseStaticFiles();
 
-			app.UseRouting();
+      app.UseRouting();
 
-			app.UseAuthorization();
+      app.UseAuthorization();
 
-			app.UseEndpoints(endpoints =>
-			{
-				endpoints.MapRazorPages();
-			});
-		}
-	}
+      app.UseEndpoints(endpoints =>
+      {
+        endpoints.MapRazorPages();
+      });
+    }
+  }
 }

@@ -8,43 +8,43 @@ using System.Threading.Tasks;
 
 namespace GucluConsultancy.Pages.Services.WorkPermit
 {
-	public class TemporaryProtectionModel : PageModel
-	{
-		private readonly IEmailSender _emailSender;
-		private readonly IEmailBuilder _emailBuilder;
+  public class TemporaryProtectionModel : PageModel
+  {
+    private readonly IEmailSender _emailSender;
+    private readonly IEmailBuilder _emailBuilder;
 
-		public TemporaryProtectionModel(IEmailSender emailSender, IEmailBuilder emailBuilder)
-		{
-			_emailSender = emailSender;
-			_emailBuilder = emailBuilder;
-		}
+    public TemporaryProtectionModel(IEmailSender emailSender, IEmailBuilder emailBuilder)
+    {
+      _emailSender = emailSender;
+      _emailBuilder = emailBuilder;
+    }
 
-		[BindProperty]
-		public TemporaryProtectionViewModel TemporaryProtectionVM { get; set; }
+    [BindProperty]
+    public TemporaryProtectionViewModel TemporaryProtectionVM { get; set; }
 
-		[TempData]
-		public string StatusMessage { get; set; }
+    [TempData]
+    public string StatusMessage { get; set; }
 
-		public void OnGet()
-		{
-			TemporaryProtectionVM = new TemporaryProtectionViewModel();
-		}
+    public void OnGet()
+    {
+      TemporaryProtectionVM = new TemporaryProtectionViewModel();
+    }
 
-		public async Task<IActionResult> OnPostAsync()
-		{
-			if (!ModelState.IsValid)
-			{
-				return Page();
-			}
+    public async Task<IActionResult> OnPostAsync()
+    {
+      if (!ModelState.IsValid)
+      {
+        return Page();
+      }
 
-			IFormFileCollection formFileCollection = HttpContext.Request.Form.Files;
-			string htmlMessage = _emailBuilder.GetHtmlString(EmailConstants.SubjectWorkTemporaryProtection, TemporaryProtectionVM);
+      IFormFileCollection formFileCollection = HttpContext.Request.Form.Files;
+      string htmlMessage = _emailBuilder.GetHtmlString(EmailConstants.SubjectWorkTemporaryProtection, TemporaryProtectionVM);
 
-			await _emailSender.SendEmailAsync(EmailConstants.SubjectWorkTemporaryProtection, htmlMessage, formFileCollection);
+      await _emailSender.SendEmailAsync(EmailConstants.SubjectWorkTemporaryProtection, htmlMessage, formFileCollection);
 
-			StatusMessage = "Form başarıyla gönderildi!";
+      StatusMessage = "Form başarıyla gönderildi!";
 
-			return RedirectToPage("/Index");
-		}
-	}
+      return RedirectToPage("/Index");
+    }
+  }
 }

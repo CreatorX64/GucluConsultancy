@@ -2,356 +2,356 @@
 @model GucluConsultancy.Pages.Services.WorkPermit.WithResidencyModel
 
 @{
-	ViewData["Title"] = "İkamet İzinli Çalışma İzni";
+  ViewData["Title"] = "İkamet İzinli Çalışma İzni";
 }
 
 <section class="page-header">
-	<div class="container">
-		<h1>İkamet İzinli Çalışma İzni</h1>
-	</div>
+  <div class="container">
+    <h1>İkamet İzinli Çalışma İzni</h1>
+  </div>
 </section>
 
 <section class="page-content form-page">
-	<div class="container">
+  <div class="container">
 
-		<p class="mandotary-field-warning">Zorunlu alanlar <span class="text-danger">*</span> karakteri ile işaretlenmiştir.</p>
+    <p class="mandotary-field-warning">Zorunlu alanlar <span class="text-danger">*</span> karakteri ile işaretlenmiştir.</p>
 
-		<form class="information-form" method="post" enctype="multipart/form-data">
-			<div asp-validation-summary="ModelOnly"></div>
+    <form class="information-form" method="post" enctype="multipart/form-data">
+      <div asp-validation-summary="ModelOnly"></div>
 
-			<section class="form-group">
-				<h2>Şirket Bilgileri</h2>
-				<p class="form-group-info">
-					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Şirketin SGK e-bildirge sorumlusunun elektronik imzası yok ise <strong>E-Tuğra marka elektronik imza tarafımızdan satılmaktadır.</strong>
-				</p>
-				<p class="form-group-info">
-					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Sözleşme tarafımızdan hazırlanır (İşçinin aylık ücreti en az NET/BRÜT ücreti 4.238,85₺ / 5.366,25₺)
-				</p>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.SgkNumber"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.SgkNumber" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.SgkNumber" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.CompanyPhoneNumber"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.CompanyPhoneNumber" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.CompanyPhoneNumber" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.CompanyEmailAddress"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.CompanyEmailAddress" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.CompanyEmailAddress" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerJobDetails"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerJobDetails" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerJobDetails" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ReasonToHireForeigner"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ReasonToHireForeigner" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ReasonToHireForeigner" class="text-danger"></span>
-				</div>
-			</section>
+      <section class="form-group">
+        <h2>Şirket Bilgileri</h2>
+        <p class="form-group-info">
+          <i class="fas fa-info-circle"></i>&nbsp;&nbsp;Şirketin SGK e-bildirge sorumlusunun elektronik imzası yok ise <strong>E-Tuğra marka elektronik imza tarafımızdan satılmaktadır.</strong>
+        </p>
+        <p class="form-group-info">
+          <i class="fas fa-info-circle"></i>&nbsp;&nbsp;Sözleşme tarafımızdan hazırlanır (İşçinin aylık ücreti en az NET/BRÜT ücreti 4.238,85₺ / 5.366,25₺)
+        </p>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.SgkNumber"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.SgkNumber" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.SgkNumber" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.CompanyPhoneNumber"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.CompanyPhoneNumber" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.CompanyPhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.CompanyEmailAddress"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.CompanyEmailAddress" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.CompanyEmailAddress" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerJobDetails"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerJobDetails" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerJobDetails" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ReasonToHireForeigner"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ReasonToHireForeigner" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ReasonToHireForeigner" class="text-danger"></span>
+        </div>
+      </section>
 
-			<section class="form-group">
-				<h2>Yabancı Bilgileri</h2>
-				<p class="form-group-info">
-					<i class="fas fa-info-circle"></i>&nbsp;&nbsp;Yabancı henüz kayıt olmadıysa İlçe Nüfus Müdürlüğüne adres kaydı yaptırması gerekiyor.
-				</p>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerFatherName"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerFatherName" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerFatherName" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerPhoneNumber"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerPhoneNumber" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerPhoneNumber" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerEmailAddress"></label>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerEmailAddress" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerAbroadAddress"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerAbroadAddress" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerAbroadAddress" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerSpouseFullName"></label>
-							<br />
-							<span class="label-detail">evli ise</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerSpouseFullName" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerSpouseNationality"></label>
-							<br />
-							<span class="label-detail">evli ise</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerSpouseNationality" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerMotherLanguage"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerMotherLanguage" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerMotherLanguage" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerTurkishLevel"></label> <span class="text-danger">*</span>
-						</div>
-						<select asp-for="WithResidencyVM.ForeignerTurkishLevel">
-							<option value="Az">Az</option>
-							<option value="Normal">Normal</option>
-							<option value="İyi">İyi</option>
-						</select>
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerTurkishLevel" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerOtherLanguages"></label>
-							<br />
-							<span class="label-detail">Virgül ile ayırarak yazınız</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerOtherLanguages" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerEducationStatus"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerEducationStatus" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerEducationStatus" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerLastGraduatedSchoolAndPlace"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerLastGraduatedSchoolAndPlace" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerLastGraduatedSchoolAndPlace" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerProfessionalQualification"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerProfessionalQualification" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerProfessionalQualification" class="text-danger"></span>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label asp-for="WithResidencyVM.ForeignerSpecializationSubject"></label> <span class="text-danger">*</span>
-						</div>
-						<input asp-for="WithResidencyVM.ForeignerSpecializationSubject" />
-					</div>
-					<span asp-validation-for="WithResidencyVM.ForeignerSpecializationSubject" class="text-danger"></span>
-				</div>
-			</section>
+      <section class="form-group">
+        <h2>Yabancı Bilgileri</h2>
+        <p class="form-group-info">
+          <i class="fas fa-info-circle"></i>&nbsp;&nbsp;Yabancı henüz kayıt olmadıysa İlçe Nüfus Müdürlüğüne adres kaydı yaptırması gerekiyor.
+        </p>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerFatherName"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerFatherName" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerFatherName" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerPhoneNumber"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerPhoneNumber" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerPhoneNumber" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerEmailAddress"></label>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerEmailAddress" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerAbroadAddress"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerAbroadAddress" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerAbroadAddress" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerSpouseFullName"></label>
+              <br />
+              <span class="label-detail">evli ise</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerSpouseFullName" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerSpouseNationality"></label>
+              <br />
+              <span class="label-detail">evli ise</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerSpouseNationality" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerMotherLanguage"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerMotherLanguage" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerMotherLanguage" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerTurkishLevel"></label> <span class="text-danger">*</span>
+            </div>
+            <select asp-for="WithResidencyVM.ForeignerTurkishLevel">
+              <option value="Az">Az</option>
+              <option value="Normal">Normal</option>
+              <option value="İyi">İyi</option>
+            </select>
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerTurkishLevel" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerOtherLanguages"></label>
+              <br />
+              <span class="label-detail">Virgül ile ayırarak yazınız</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerOtherLanguages" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerEducationStatus"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerEducationStatus" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerEducationStatus" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerLastGraduatedSchoolAndPlace"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerLastGraduatedSchoolAndPlace" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerLastGraduatedSchoolAndPlace" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerProfessionalQualification"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerProfessionalQualification" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerProfessionalQualification" class="text-danger"></span>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label asp-for="WithResidencyVM.ForeignerSpecializationSubject"></label> <span class="text-danger">*</span>
+            </div>
+            <input asp-for="WithResidencyVM.ForeignerSpecializationSubject" />
+          </div>
+          <span asp-validation-for="WithResidencyVM.ForeignerSpecializationSubject" class="text-danger"></span>
+        </div>
+      </section>
 
-			<section class="form-group">
-				<h2>Dosyalar</h2>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="CorporateTaxReturn">2019 Kurumlar Vergisi Beyannamesi (PDF)</label> <span class="text-danger">*</span>
-							<br />
-							<span class="label-detail">
-								(1) Ödenmiş sermayesi en az 100 TL veya brüt satışlarının en az 800.000 TL olması,
-								(2) En az 5 T.C. Vatandaşı sigortalı olarak çalışması gerekiyor
-							</span>
-						</div>
-						<input type="file" name="CorporateTaxReturn" id="CorporateTaxReturn" accept=".pdf" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="TradeRegistryGazette">Türkiye Ticaret Sicil Gazetesi (PDF)</label> <span class="text-danger">*</span>
-							<br />
-							<span class="label-detail">
-								Kuruluşun en son sermaye ve ortaklık yapısını gösteren belge
-							</span>
-						</div>
-						<input type="file" name="TradeRegistryGazette" id="TradeRegistryGazette" accept=".pdf" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="OperatingCertificate">Faaliyet Belgesi (PDF)</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="OperatingCertificate" id="OperatingCertificate" accept=".pdf" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="ForeignerBiometricPhoto">Yabancı biyometrik fotoğrafı</label> <span class="text-danger">*</span>
-							<br />
-							<span class="label-detail">son 6 ay içinde çekilmiş</span>
-						</div>
-						<input type="file" name="ForeignerBiometricPhoto" id="ForeignerBiometricPhoto" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="ForeignerPassport">Yabancının pasaport fotoğraflı sayfası</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="ForeignerPassport" id="ForeignerPassport" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="ForeignerPassportLastTurkeyEntryPage">Yabancının pasaport Türkiye'ye son giriş tarihli sayfası</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="ForeignerPassportLastTurkeyEntryPage" id="ForeignerPassportLastTurkeyEntryPage" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="ForeignerResidencyPermit">Yabancının ikamet izni belge fotoğrafı</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="ForeignerResidencyPermit" id="ForeignerResidencyPermit" />
-					</div>
-				</div>
-				<div class="form-line">
-					<div class="label-input">
-						<div class="label">
-							<label for="ForeignerDiplomaOrCertificate">Yabancıya ait Türkçe tercümeli Diploma/Bonservis/Sertifika (PDF)</label> <span class="text-danger">*</span>
-						</div>
-						<input type="file" name="ForeignerDiplomaOrCertificate" id="ForeignerDiplomaOrCertificate" accept=".pdf" />
-					</div>
-				</div>
-			</section>
+      <section class="form-group">
+        <h2>Dosyalar</h2>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="CorporateTaxReturn">2019 Kurumlar Vergisi Beyannamesi (PDF)</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">
+                (1) Ödenmiş sermayesi en az 100 TL veya brüt satışlarının en az 800.000 TL olması,
+                (2) En az 5 T.C. Vatandaşı sigortalı olarak çalışması gerekiyor
+              </span>
+            </div>
+            <input type="file" name="CorporateTaxReturn" id="CorporateTaxReturn" accept=".pdf" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="TradeRegistryGazette">Türkiye Ticaret Sicil Gazetesi (PDF)</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">
+                Kuruluşun en son sermaye ve ortaklık yapısını gösteren belge
+              </span>
+            </div>
+            <input type="file" name="TradeRegistryGazette" id="TradeRegistryGazette" accept=".pdf" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="OperatingCertificate">Faaliyet Belgesi (PDF)</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="OperatingCertificate" id="OperatingCertificate" accept=".pdf" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="ForeignerBiometricPhoto">Yabancı biyometrik fotoğrafı</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">son 6 ay içinde çekilmiş</span>
+            </div>
+            <input type="file" name="ForeignerBiometricPhoto" id="ForeignerBiometricPhoto" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="ForeignerPassport">Yabancının pasaport fotoğraflı sayfası</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="ForeignerPassport" id="ForeignerPassport" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="ForeignerPassportLastTurkeyEntryPage">Yabancının pasaport Türkiye'ye son giriş tarihli sayfası</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="ForeignerPassportLastTurkeyEntryPage" id="ForeignerPassportLastTurkeyEntryPage" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="ForeignerResidencyPermit">Yabancının ikamet izni belge fotoğrafı</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="ForeignerResidencyPermit" id="ForeignerResidencyPermit" />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="label-input">
+            <div class="label">
+              <label for="ForeignerDiplomaOrCertificate">Yabancıya ait Türkçe tercümeli Diploma/Bonservis/Sertifika (PDF)</label> <span class="text-danger">*</span>
+            </div>
+            <input type="file" name="ForeignerDiplomaOrCertificate" id="ForeignerDiplomaOrCertificate" accept=".pdf" />
+          </div>
+        </div>
+      </section>
 
-			<div class="form-line">
-				<div class="user-agreement-input">
-					<input type="checkbox" id="user-agreement-check" name="user-agreement-check" required />
-					<label for="user-agreement-check">
-						<a asp-page="/UserAgreement" target="_blank">Kullanıcı sözleşmesini</a> okuduğumu ve kabul ettiğimi onaylıyorum.
-					</label>
-				</div>
-				<button type="submit" class="button button-action" onclick="return validateInput()">Gönder</button>
-			</div>
-		</form>
+      <div class="form-line">
+        <div class="user-agreement-input">
+          <input type="checkbox" id="user-agreement-check" name="user-agreement-check" required />
+          <label for="user-agreement-check">
+            <a asp-page="/UserAgreement" target="_blank">Kullanıcı sözleşmesini</a> okuduğumu ve kabul ettiğimi onaylıyorum.
+          </label>
+        </div>
+        <button type="submit" class="button button-action" onclick="return validateInput()">Gönder</button>
+      </div>
+    </form>
 
-	</div>
+  </div>
 </section>
 
 @section Scripts {
 
-	<partial name="_ValidationScriptsPartial" />
+  <partial name="_ValidationScriptsPartial" />
 
-	<script>
-		function validateInput()
-		{
-			if (document.querySelector("#CorporateTaxReturn").value === "")
-			{
-				swal("Lütfen 2019 Kurumlar Vergisi Beyannamesi yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#TradeRegistryGazette").value === "")
-			{
-				swal("Lütfen Türkiye Ticaret Sicil Gazetesi yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#OperatingCertificate").value === "")
-			{
-				swal("Lütfen Faaliyet Belgesi yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#ForeignerBiometricPhoto").value === "")
-			{
-				swal("Lütfen yabancının biyometrik fotoğrafını yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#ForeignerPassport").value === "")
-			{
-				swal("Lütfen yabancının pasaport fotoğraflı sayfasını yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#ForeignerPassportLastTurkeyEntryPage").value === "")
-			{
-				swal("Lütfen yabancının pasaport Türkiye'ye son giriş tarihli sayfasını yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#ForeignerResidencyPermit").value === "")
-			{
-				swal("Lütfen yabancının ikamet izni belge fotoğrafını yükleyiniz.", "error");
-				return false;
-			}
-			else if (document.querySelector("#ForeignerDiplomaOrCertificate").value === "")
-			{
-				swal("Lütfen yabancıya ait Türkçe tercümeli Diploma/Bonservis/Sertifika yükleyiniz.", "error");
-				return false;
-			}
-			else if (!document.querySelector("#user-agreement-check").checked)
-			{
-				swal("Lütfen kullanıcı sözleşmesini onaylayınız.", "error");
-				return false;
-			}
+  <script>
+    function validateInput()
+    {
+      if (document.querySelector("#CorporateTaxReturn").value === "")
+      {
+        swal("Lütfen 2019 Kurumlar Vergisi Beyannamesi yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#TradeRegistryGazette").value === "")
+      {
+        swal("Lütfen Türkiye Ticaret Sicil Gazetesi yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#OperatingCertificate").value === "")
+      {
+        swal("Lütfen Faaliyet Belgesi yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#ForeignerBiometricPhoto").value === "")
+      {
+        swal("Lütfen yabancının biyometrik fotoğrafını yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#ForeignerPassport").value === "")
+      {
+        swal("Lütfen yabancının pasaport fotoğraflı sayfasını yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#ForeignerPassportLastTurkeyEntryPage").value === "")
+      {
+        swal("Lütfen yabancının pasaport Türkiye'ye son giriş tarihli sayfasını yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#ForeignerResidencyPermit").value === "")
+      {
+        swal("Lütfen yabancının ikamet izni belge fotoğrafını yükleyiniz.", "error");
+        return false;
+      }
+      else if (document.querySelector("#ForeignerDiplomaOrCertificate").value === "")
+      {
+        swal("Lütfen yabancıya ait Türkçe tercümeli Diploma/Bonservis/Sertifika yükleyiniz.", "error");
+        return false;
+      }
+      else if (!document.querySelector("#user-agreement-check").checked)
+      {
+        swal("Lütfen kullanıcı sözleşmesini onaylayınız.", "error");
+        return false;
+      }
 
-			return true;
-		}
-	</script>
+      return true;
+    }
+  </script>
 
 }

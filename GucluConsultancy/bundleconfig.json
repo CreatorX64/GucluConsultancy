@@ -1,23 +1,23 @@
 [
-	{
-		"outputFileName": "wwwroot/css/main.min.css",
-		"inputFiles": [ "wwwroot/css/main.css" ],
-		"minify": {
-			"enabled": true
-		}
-	},
-	{
-		"outputFileName": "wwwroot/js/main.min.js",
-		"inputFiles": [ "wwwroot/js/main.js" ],
-		"minify": {
-			"enabled": true
-		}
-	},
-	{
-		"outputFileName": "wwwroot/js/insurance-checker.min.js",
-		"inputFiles": [ "wwwroot/js/insurance-checker.js" ],
-		"minify": {
-			"enabled": true
-		}
-	}
+  {
+    "outputFileName": "wwwroot/css/main.min.css",
+    "inputFiles": [ "wwwroot/css/main.css" ],
+    "minify": {
+      "enabled": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/main.min.js",
+    "inputFiles": [ "wwwroot/js/main.js" ],
+    "minify": {
+      "enabled": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/js/insurance-checker.min.js",
+    "inputFiles": [ "wwwroot/js/insurance-checker.js" ],
+    "minify": {
+      "enabled": true
+    }
+  }
 ]

@@ -8,43 +8,43 @@ using System.Threading.Tasks;
 
 namespace GucluConsultancy.Pages.Services.ResidencyPermit
 {
-	public class ShortTermModel : PageModel
-	{
-		private readonly IEmailSender _emailSender;
-		private readonly IEmailBuilder _emailBuilder;
+  public class ShortTermModel : PageModel
+  {
+    private readonly IEmailSender _emailSender;
+    private readonly IEmailBuilder _emailBuilder;
 
-		public ShortTermModel(IEmailSender emailSender, IEmailBuilder emailBuilder)
-		{
-			_emailSender = emailSender;
-			_emailBuilder = emailBuilder;
-		}
+    public ShortTermModel(IEmailSender emailSender, IEmailBuilder emailBuilder)
+    {
+      _emailSender = emailSender;
+      _emailBuilder = emailBuilder;
+    }
 
-		[BindProperty]
-		public ShortTermViewModel ShortTermVM { get; set; }
+    [BindProperty]
+    public ShortTermViewModel ShortTermVM { get; set; }
 
-		[TempData]
-		public string StatusMessage { get; set; }
+    [TempData]
+    public string StatusMessage { get; set; }
 
-		public void OnGet()
-		{
-			ShortTermVM = new ShortTermViewModel();
-		}
+    public void OnGet()
+    {
+      ShortTermVM = new ShortTermViewModel();
+    }
 
-		public async Task<IActionResult> OnPostAsync()
-		{
-			if (!ModelState.IsValid)
-			{
-				return Page();
-			}
+    public async Task<IActionResult> OnPostAsync()
+    {
+      if (!ModelState.IsValid)
+      {
+        return Page();
+      }
 
-			IFormFileCollection formFileCollection = HttpContext.Request.Form.Files;
-			string htmlMessage = _emailBuilder.GetHtmlString(EmailConstants.SubjectResidencyShortTerm, ShortTermVM);
+      IFormFileCollection formFileCollection = HttpContext.Request.Form.Files;
+      string htmlMessage = _emailBuilder.GetHtmlString(EmailConstants.SubjectResidencyShortTerm, ShortTermVM);
 
-			await _emailSender.SendEmailAsync(EmailConstants.SubjectResidencyShortTerm, htmlMessage, formFileCollection);
+      await _emailSender.SendEmailAsync(EmailConstants.SubjectResidencyShortTerm, htmlMessage, formFileCollection);
 
-			StatusMessage = "Form başarıyla gönderildi!";
+      StatusMessage = "Form başarıyla gönderildi!";
 
-			return RedirectToPage("/Index");
-		}
-	}
+      return RedirectToPage("/Index");
+    }
+  }
 }
