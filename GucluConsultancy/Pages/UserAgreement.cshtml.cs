@@ -6,6 +6,7 @@ namespace GucluConsultancy.Pages
   {
     public void OnGet()
     {
+      // Empty block.
     }
   }
 }
