@@ -2,6 +2,7 @@ using GucluConsultancy.Utility;
 using GucluConsultancy.Utility.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +24,11 @@ namespace GucluConsultancy
       services.AddSingleton<IEmailSender, EmailSender>();
       services.AddScoped<IEmailBuilder, EmailBuilder>();
 
+      services.Configure<ForwardedHeadersOptions>(options =>
+      {
+        options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+      });
+
       services.AddRazorPages();
     }
 
@@ -31,10 +37,12 @@ namespace GucluConsultancy
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
+        app.UseForwardedHeaders();
       }
       else
       {
         app.UseExceptionHandler("/Error");
+        app.UseForwardedHeaders();
         app.UseHsts();
       }
 
