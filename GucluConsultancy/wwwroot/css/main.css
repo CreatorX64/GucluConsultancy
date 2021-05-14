@@ -499,6 +499,11 @@ footer {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }
 
+.service-card a {
+  display: inline-block;
+  text-align: center;
+}
+
 .service-text {
   text-align: center;
   font-size: 1.7rem;
