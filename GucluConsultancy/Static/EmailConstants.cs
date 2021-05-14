@@ -4,7 +4,7 @@
   {
     public const string Sender = "gydwebsite@gmail.com";
     public const string SenderName = "GYD Website";
-    public const string Receiver = "creatorX64@gmail.com";
+    public const string Receiver = "gucludanismanliknet@gmail.com";
 
     public const string SubjectResidencyFamily = "Aile İkamet İzni";
     public const string SubjectResidencyLongTerm = "Uzun Dönem İkamet İzni";
