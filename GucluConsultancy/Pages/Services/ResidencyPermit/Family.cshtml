@@ -26,7 +26,7 @@
             <div class="label">
               <label asp-for="FamilyVM.ForeignersId"></label>
               <br />
-              <span class="label-detail">daha önce ikamet izni varsa</span>
+              <span class="label-detail">Foreigner's ID (if exists)</span>
             </div>
             <input asp-for="FamilyVM.ForeignersId" />
           </div>
@@ -35,6 +35,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FatherName"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Father's name</span>
             </div>
             <input asp-for="FamilyVM.FatherName" />
           </div>
@@ -44,6 +46,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.MotherName"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Mother's name</span>
             </div>
             <input asp-for="FamilyVM.MotherName" />
           </div>
@@ -53,13 +57,15 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.MaritalStatus"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Marital status</span>
             </div>
             <select asp-for="FamilyVM.MaritalStatus">
               <option value="" selected disabled>-- Seçiniz --</option>
-              <option value="Evli">Evli</option>
-              <option value="Bekar">Bekar</option>
-              <option value="Boşanmış">Boşanmış</option>
-              <option value="Dul">Dul</option>
+              <option value="Evli">Evli (married)</option>
+              <option value="Bekar">Bekar (single)</option>
+              <option value="Boşanmış">Boşanmış (divorced)</option>
+              <option value="Dul">Dul (widow)</option>
             </select>
           </div>
           <span asp-validation-for="FamilyVM.MaritalStatus" class="text-danger"></span>
@@ -68,6 +74,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.BirthCountry"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Country of birth</span>
             </div>
             <input asp-for="FamilyVM.BirthCountry" />
           </div>
@@ -77,6 +85,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.BirthNationality"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Nationality at birth</span>
             </div>
             <input asp-for="FamilyVM.BirthNationality" />
           </div>
@@ -90,6 +100,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.PhoneNumber"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Phone number</span>
             </div>
             <input asp-for="FamilyVM.PhoneNumber" />
           </div>
@@ -99,6 +111,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.EmailAddress"></label>
+              <br />
+              <span class="label-detail">Email address</span>
             </div>
             <input asp-for="FamilyVM.EmailAddress" />
           </div>
@@ -107,6 +121,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.AddressAbroad"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Home address abroad</span>
             </div>
             <input asp-for="FamilyVM.AddressAbroad" />
           </div>
@@ -116,6 +132,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.AddressTurkey"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Home address in Turkey</span>
             </div>
             <input asp-for="FamilyVM.AddressTurkey" />
           </div>
@@ -129,6 +147,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.MonthlyIncome"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Monthly income</span>
             </div>
             <input asp-for="FamilyVM.MonthlyIncome" value="" />
           </div>
@@ -138,6 +158,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.DesiredResidencyDuration"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Desired residency duration</span>
             </div>
             <input asp-for="FamilyVM.DesiredResidencyDuration" value="" />
           </div>
@@ -146,11 +168,13 @@
       </section>
 
       <section class="form-group">
-        <h2>Aile İkamet İzni Aldığı Kişinin;</h2>
+        <h2>Aile İkamet İzni Aldığı Kişinin; (Supporter family member information)</h2>
         <div class="form-line">
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FamilyMemberEmailAddress"></label>
+              <br />
+              <span class="label-detail">Supporter's email address</span>
             </div>
             <input asp-for="FamilyVM.FamilyMemberEmailAddress" />
           </div>
@@ -159,6 +183,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FamilyMemberPhoneNumber"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Supporter's phone number</span>
             </div>
             <input asp-for="FamilyVM.FamilyMemberPhoneNumber" />
           </div>
@@ -168,6 +194,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FamilyMemberOccupation"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Suporter's occupation/profession</span>
             </div>
             <input asp-for="FamilyVM.FamilyMemberOccupation" />
           </div>
@@ -177,6 +205,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FamilyMemberMonthlyIncome"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Supporter's monthly income</span>
             </div>
             <input asp-for="FamilyVM.FamilyMemberMonthlyIncome" value="" />
           </div>
@@ -186,6 +216,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FamilyMemberHomeAddress"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Supporter's home address</span>
             </div>
             <input asp-for="FamilyVM.FamilyMemberHomeAddress" />
           </div>
@@ -195,6 +227,8 @@
           <div class="label-input">
             <div class="label">
               <label asp-for="FamilyVM.FamilyMemberFamilySize"></label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Supporter's family size (incl. himself/herself)</span>
             </div>
             <input asp-for="FamilyVM.FamilyMemberFamilySize" value="" />
           </div>
@@ -204,6 +238,8 @@
           <div class="label-input">
             <div class="label">
               <label for="FamilyMemberIdCard">Nüfus cüzdanı fotoğrafı</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Supporter's ID card</span>
             </div>
             <input type="file" name="FamilyMemberIdCard" id="FamilyMemberIdCard" />
           </div>
@@ -212,6 +248,8 @@
           <div class="label-input">
             <div class="label">
               <label for="FamilyMemberInsurance">Sağlık sigortası</label>
+              <br />
+              <span class="label-detail">Supporter's health insurance</span>
             </div>
             <input type="file" name="FamilyMemberInsurance" id="FamilyMemberInsurance" />
           </div>
@@ -220,6 +258,8 @@
           <div class="label-input">
             <div class="label">
               <label for="FamilyMemberWorkPermit">Yabancı ise çalışma izin belgesi</label>
+              <br />
+              <span class="label-detail">Work permit document (only if supporter is foreigner)</span>
             </div>
             <input type="file" name="FamilyMemberWorkPermit" id="FamilyMemberWorkPermit" />
           </div>
@@ -232,6 +272,8 @@
           <div class="label-input">
             <div class="label">
               <label for="BiometricPhoto">Biyometrik fotoğraf</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Biometric photo</span>
             </div>
             <input type="file" name="BiometricPhoto" id="BiometricPhoto" />
           </div>
@@ -240,6 +282,8 @@
           <div class="label-input">
             <div class="label">
               <label for="PassportImage">Pasaport önyüz</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Passport front page</span>
             </div>
             <input type="file" name="PassportImage" id="PassportImage" />
           </div>
@@ -249,7 +293,7 @@
             <div class="label">
               <label for="PreviousResidencyCard">İkamet izin belgesi</label>
               <br />
-              <span class="label-detail">daha önce ikamet izni varsa</span>
+              <span class="label-detail">Previous residency permit document (if exists)</span>
             </div>
             <input type="file" name="PreviousResidencyCard" id="PreviousResidencyCard" />
           </div>
@@ -258,14 +302,16 @@
           <div class="label-input">
             <div class="label">
               <label>Sağlık sigortanız var mı?</label>
+              <br />
+              <span class="label-detail">Do you have health insurance?</span>
             </div>
             <div class="insurance-options">
               <div>
-                <label for="yes-insurance">Evet</label>
+                <label for="yes-insurance">Evet (yes)</label>
                 <input type="radio" name="have-insurance" id="yes-insurance" value="yes" />
               </div>
               <div>
-                <label for="no-insurance">Hayır</label>
+                <label for="no-insurance">Hayır (no)</label>
                 <input type="radio" name="have-insurance" id="no-insurance" value="no" checked />
               </div>
             </div>
@@ -275,6 +321,8 @@
           <div class="label-input">
             <div class="label">
               <label for="Insurance">Sağlık sigortası</label> <span class="text-danger">*</span>
+              <br />
+              <span class="label-detail">Health insurance document</span>
             </div>
             <input type="file" name="Insurance" id="Insurance" />
           </div>
